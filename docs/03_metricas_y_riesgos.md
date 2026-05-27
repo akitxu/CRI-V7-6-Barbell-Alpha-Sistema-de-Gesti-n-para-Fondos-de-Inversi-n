@@ -49,9 +49,9 @@ La volatilidad es la métrica base para clasificar fondos en buckets Barbell.
 
 
 
-\[
+$$
 \sigma_{anual} = \text{std}(r_{diarios}) \times \sqrt{252}
-\]
+$$
 
 
 
@@ -73,9 +73,9 @@ El drawdown mide la caída desde un máximo histórico:
 
 
 
-\[
+$$
 DD_t = \frac{V_t - \max(V_{0..t})}{\max(V_{0..t})}
-\]
+$$
 
 
 
@@ -100,9 +100,9 @@ Mide la rentabilidad ajustada por riesgo:
 
 
 
-\[
+$$
 Sharpe = \frac{R_p - R_f}{\sigma_p}
-\]
+$$
 
 
 
@@ -132,9 +132,9 @@ Similar al Sharpe, pero penaliza solo la volatilidad negativa:
 
 
 
-\[
+$$
 Sortino = \frac{R_p - R_f}{\sigma_{downside}}
-\]
+$$
 
 
 
@@ -148,9 +148,9 @@ Relaciona rentabilidad con drawdown máximo:
 
 
 
-\[
+$$
 Calmar = \frac{R_{anual}}{|MDD|}
-\]
+$$
 
 
 
@@ -190,9 +190,9 @@ La duración mide la sensibilidad del fondo a movimientos de tipos:
 
 
 
-\[
+$$
 \Delta P \approx -Duración \times \Delta Tipos
-\]
+$$
 
 
 
@@ -234,9 +234,9 @@ Mide cuánto se desvía un fondo respecto a su índice de referencia:
 
 
 
-\[
+$$
 TE = \text{std}(R_p - R_{benchmark})
-\]
+$$
 
 
 
@@ -254,9 +254,9 @@ La beta mide la sensibilidad del fondo respecto al mercado:
 
 
 
-\[
+$$
 \beta = \frac{\text{Cov}(R_p, R_m)}{\sigma_m^2}
-\]
+$$
 
 
 
@@ -279,9 +279,9 @@ Del artículo de Antonio Dávila:
 
 
 
-\[
+$$
 \text{Pérdida máxima tolerable} \approx \frac{Yield}{Duración}
-\]
+$$
 
 
 
