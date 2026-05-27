@@ -26,7 +26,7 @@ La idea es convertir el análisis en una rutina periódica simple, no en un sist
 Paso a paso cada trimestre
 ## 1. Actualizar los datos (5 minutos)
 Descargar los CSV actualizados de tus fondos y guardarlos en la carpeta Datos_fondos_csv. La mayoría de plataformas (Renta 4, Morningstar, Yahoo Finance) permiten exportar el histórico de cotizaciones.
-##2. Ejecutar el análisis (2 minutos)
+## 2. Ejecutar el análisis (2 minutos)
 ```
 python# Celda 1
 %run barbell_alert.py
