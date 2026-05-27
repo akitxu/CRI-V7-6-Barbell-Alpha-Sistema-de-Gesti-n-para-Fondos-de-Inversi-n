@@ -78,7 +78,9 @@ Python
 ba.run(actualizar_excel=True);
 ```
 ## El árbol de decisión trimestral
+
 ![Árbol de decisión](./img/arbol_decision.png)
+
 
 
 ```
