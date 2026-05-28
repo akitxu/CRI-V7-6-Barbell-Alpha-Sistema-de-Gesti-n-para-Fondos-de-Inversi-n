@@ -1,50 +1,55 @@
-# Licencia — Creative Commons BY‑NC‑SA 4.0  
-**Barbell-Strategies**  
+# Licencia — Creative Commons BY‑NC‑SA 4.0
+
+Barbell‑Strategies  
 Copyright © 2026 efueyo
 
-Este proyecto se distribuye bajo la licencia **Creative Commons Atribución – No Comercial – Compartir Igual 4.0 Internacional (CC BY‑NC‑SA 4.0)**.
+Este proyecto se distribuye públicamente bajo la licencia
+Creative Commons Atribución – No Comercial – Compartir Igual 4.0 Internacional (CC BY‑NC‑SA 4.0).
 
----
+Además, para instituciones académicas, comités técnicos o entidades financieras que participen en procesos de validación, auditoría o revisión metodológica, se ofrece un permiso institucional adicional de uso no comercial, descrito más abajo.
 
-## ✔ Permisos
+## Licencia pública (CC BY‑NC‑SA 4.0)
 
 Puedes:
 
-- **Usar** el contenido con fines personales, educativos o de investigación.  
-- **Compartirlo** en cualquier medio o formato.  
-- **Adaptarlo o modificarlo**, siempre que mantengas la misma licencia.  
+    Usar el contenido con fines personales, educativos o de investigación.
+
+    Compartirlo en cualquier medio o formato.
+
+    Adaptarlo o modificarlo, siempre que mantengas la misma licencia.
 
 Estas libertades son irrevocables mientras cumplas los términos de la licencia.
+Condiciones
 
----
-
-## ✔ Condiciones
-
-### **Atribución (BY)**  
+Atribución (BY)  
 Debes citar al autor original, incluir un enlace a esta licencia e indicar si realizas cambios.
 
-### **No Comercial (NC)**  
+No Comercial (NC)  
 No puedes usar este proyecto, su código o sus datos con fines comerciales, ni integrarlo en productos o servicios de pago.
 
-### **Compartir Igual (SA)**  
-Si adaptas, modificas o construyes sobre este proyecto, **debes distribuir tu versión bajo la misma licencia CC BY‑NC‑SA 4.0**.
+Compartir Igual (SA)  
+Si adaptas, modificas o construyes sobre este proyecto, debes distribuir tu versión bajo la misma licencia CC BY‑NC‑SA 4.0.
 
----
+## Permiso institucional adicional (uso no comercial para validación)
 
-## ❌ Restricciones adicionales
+Las instituciones que participen en procesos de homologación, revisión académica, auditoría técnica o análisis metodológico reciben un permiso adicional para:
 
-No puedes aplicar medidas tecnológicas o legales que limiten los permisos otorgados por esta licencia.
+    Ejecutar el código en sus sistemas internos.
 
----
+    Analizar, revisar y auditar la metodología, datos y resultados.
 
-## ⚠ Aviso legal
+    Integrar temporalmente el código en entornos de validación o investigación.
 
-Este proyecto se proporciona **“tal cual”**, sin garantías de ningún tipo.  
-El autor no se hace responsable de daños, pérdidas o consecuencias derivadas del uso del software, datos o documentación.
+    Generar informes internos basados en la estrategia.
 
----
+Límites del permiso institucional
 
-## 📄 Texto legal completo
+    No otorga ningún derecho comercial.
 
-Puedes consultar la licencia completa en:  
-https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+    No permite redistribuir el código fuera del proceso de validación.
+
+    No permite integrarlo en productos, servicios o carteras reales sin autorización expresa del autor.
+
+    No modifica la titularidad ni los derechos del autor.
+
+Este permiso institucional es revocable, no exclusivo y limitado al proceso de validación.
