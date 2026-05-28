@@ -143,7 +143,10 @@ Permite compartir y adaptar, siempre que:
 - las obras derivadas mantengan la misma licencia.
 
 ---
-
+# Disclaimer  
+Este proyecto es experimental y se ofrece únicamente con fines educativos y de investigación.
+No constituye asesoramiento financiero ni una recomendación de inversión.
+El autor no garantiza la exactitud, integridad o idoneidad del contenido y no asume ninguna responsabilidad por pérdidas derivadas de su uso.
 # 🧭 Resumen para visitantes de GitHub
 
 Barbell‑Strategies es una metodología moderna para gestionar carteras conservadoras en un entorno de tipos incierto.  
