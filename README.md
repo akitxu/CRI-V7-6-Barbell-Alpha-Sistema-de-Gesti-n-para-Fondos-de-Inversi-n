@@ -1,20 +1,20 @@
- # Barbell‑Strategies  
-### Gestión sistemática de carteras conservadoras basada en duración, curva de tipos y análisis cuantitativo
+# Barbell‑Strategies  
+### Gestión sistemática de carteras conservadoras basada en análisis cuantitativo y asignación dinámica
 
 Barbell‑Strategies es un proyecto diseñado para ayudar a inversores conservadores y moderados a gestionar carteras de fondos de inversión de forma:
 
 - sistemática  
 - disciplinada  
 - basada en datos  
-- adaptada al ciclo económico  
+- adaptada al entorno de mercado  
 
 El proyecto combina:
 
-- reglas clásicas de gestión de duración,  
-- señales macroeconómicas (curva de tipos),  
-- principios de la estrategia Barbell,  
+- reglas clásicas de gestión Barbell,  
+- clasificación de fondos por buckets de riesgo,  
+- un motor técnico avanzado para detectar regímenes de mercado,  
 - un módulo cuantitativo para analizar carteras reales,  
-- y una versión avanzada llamada **Barbell Alpha**.
+- y una versión evolucionada llamada **CRI V7‑6 Barbell_Alpha**.
 
 El objetivo es ofrecer una metodología clara y reproducible para proteger el capital sin renunciar a oportunidades.
 
@@ -26,33 +26,44 @@ El repositorio incluye documentación completa, herramientas conceptuales y una 
 
 ## 📚 Documentación principal
 
-| Documento | Descripción |
-|----------|-------------|
-| **[00_vision_general.md](docs/00_vision_general.md)** | Visión general del proyecto y sus objetivos. |
-| **[01_reglas_barbell_fondos.md](docs/01_reglas_barbell_fondos.md)** | Reglas de la estrategia Barbell aplicadas a fondos UCITS. |
-| **[02_estrategia_barbell_alpha.md](docs/02_estrategia_barbell_alpha.md)** | Versión avanzada y flexible de la Barbell clásica. |
-| **[03_metricas_y_riesgos.md](docs/03_metricas_y_riesgos.md)** | Métricas cuantitativas para evaluar carteras de fondos. |
-| **[04_barbell_alert_documentacion.md](docs/04_barbell_alert_documentacion.md)** | Documentación técnica del módulo Barbell Alert. |
-| **[05_dinamica_seguimiento_inversor.md](docs/05_dinamica_seguimiento_inversor.md)** | Guía operativa para el seguimiento trimestral. |
-| **[06_articulo_rankia.md](docs/06_articulo_rankia.md)** | Artículo editorial para Rankia. |
-| **[07_presentacion_estrategia_barbell.md](docs/07_presentacion_estrategia_barbell.md)** | Presentación divulgativa de la estrategia Barbell. |
-
+| Documento / Celda | Descripción |
+|-------------------|-------------|
+| **[arquitectura_barbell_V7‑6.md](docs/arquitectura_barbell_V7‑6.md)** | Arquitectura general del sistema CRI V7‑6 Barbell_Alpha. |
+| **[Barbell_Clásica_vs_Barbell_Alpha.md](docs/Barbell_Clásica_vs_Barbell_Alpha.md)** | Celda 0 — Comparativa conceptual entre Barbell Clásica y Barbell Alpha. |
+| **Celda 1** | Carga de datos y estructura base del proyecto. |
+| **Celda 2** | Definición de constantes, parámetros y configuración global. |
+| **Celda 3** | Simuladores básicos y funciones auxiliares. |
+| **Celda 4** | Comparativa Alpha inicial y métricas fundamentales. |
+| **Celda 5** | Motor técnico avanzado basado en AnalizadorMercado. |
+| **Celda 6** | Preparación de buckets y clasificación de fondos. |
+| **Celda 7** | Pipeline PRO y depuración de la arquitectura. |
+| **Celda 8** | Ejecución de simulaciones completas. |
+| **Celda 9** | Cálculo de métricas cuantitativas (Sharpe, MDD, Calmar…). |
+| **Celda 10** | Gráficos y visualización de resultados. |
+| **Celda 11** | Diagnóstico estructural y análisis de riesgo. |
+| **Celda 12** | Pipeline completo de la estrategia. |
+| **Celda 13** | Automatización del flujo de trabajo. |
+| **Celda 14** | Capítulo 14 — Documentación narrativa. |
+| **Celda 15** | Capítulo 15 — Conclusiones y futuras extensiones. |
+| **Celda 16** | Capítulo 16 — Cómo debe utilizar un inversor la estrategia. |
+| **Celda 17** | Pipeline operativo (reglas del inversor). |
+| **Celda 18** | Dashboard operativo y presentación de resultados. |
 ---
 
 # 🧠 ¿Qué es la Estrategia Barbell?
 
 La estrategia Barbell divide la cartera en dos extremos:
 
-- **Muy corto plazo** → estabilidad, liquidez, protección ante subidas de tipos.  
-- **Muy largo plazo** → convexidad, protección ante recesiones y bajadas de tipos.
+- **Muy corto plazo** → estabilidad, liquidez, baja volatilidad.  
+- **Muy largo plazo** → convexidad, crecimiento y protección en crisis.
 
-Evita el tramo intermedio (5–7 años), que combina lo peor de ambos mundos.
+Evita el tramo intermedio, donde se concentra el riesgo menos compensado.
 
-La asignación se ajusta según el **semáforo de la curva de tipos**:
+En esta versión, la asignación se supervisa mediante:
 
-- 🟢 Empinándose → reducir duración  
-- 🟡 Plana → Barbell equilibrada  
-- 🔴 Invertida → aumentar duración larga  
+- **clasificación por buckets de riesgo**,  
+- **desviaciones respecto a la Barbell Clásica**,  
+- **régimen de mercado detectado por el motor técnico**.
 
 ---
 
@@ -62,36 +73,35 @@ El módulo Barbell Alert permite:
 
 - leer carteras reales desde Excel  
 - cargar automáticamente los CSV de cada fondo  
-- clasificar fondos por volatilidad (proxy de duración)  
-- detectar el régimen de curva (T10Y2Y)  
+- clasificar fondos por volatilidad (proxy de riesgo)  
+- detectar el régimen de mercado mediante un motor técnico avanzado  
 - actualizar valores, pesos y plusvalías  
 - simular tres estrategias:
 
   - Buy & Hold  
   - Barbell pasiva  
-  - Barbell dinámica  
+  - Barbell Alpha (CRI V7‑6)
 
 - calcular métricas clave (Sharpe, Calmar, MDD, volatilidad)  
 - generar un informe claro con rebalanceos y recomendaciones  
 
 ---
 
-# 🧩 Barbell Alpha — La evolución flexible
+# 🧩 CRI V7‑6 Barbell_Alpha — La evolución flexible
 
-Barbell Alpha amplía la estrategia clásica con:
+CRI V7‑6 Barbell_Alpha amplía la estrategia clásica con:
 
-- duración flexible  
-- crédito defensivo y oportunista  
-- liquidez estratégica  
-- señales macro ampliadas  
-- gestión dinámica del riesgo  
+- asignación dinámica según régimen de mercado  
+- sensibilidad táctica sin market timing agresivo  
+- reglas transparentes y reproducibles  
+- gestión disciplinada del riesgo  
+- estructura modular y auditable  
 
-Inspirada en fondos como DNCA Alpha Bonds, pero con reglas transparentes y reproducibles.
+Inspirada en la filosofía Barbell, pero adaptada a carteras reales de fondos de inversión.
 
 ---
 
 # 📁 Estructura del repositorio
-
 
 ```
 Barbell-Strategies/
@@ -115,6 +125,9 @@ Barbell-Strategies/
 
 ---
 
+
+---
+
 # 🚀 Guía rápida de uso
 
 1. Actualiza los CSV de tus fondos en `/data/`.  
@@ -122,12 +135,39 @@ Barbell-Strategies/
 3. Revisa:
 
    - clasificación por buckets  
-   - régimen de curva  
+   - régimen de mercado  
    - desviaciones respecto a la Barbell objetivo  
    - recomendaciones de rebalanceo  
 
 4. Consulta la documentación en `/docs/` para interpretar resultados.  
-5. Repite trimestralmente.
+5. Repite periódicamente.
+
+---
+
+# 📄 Licencia
+
+Este proyecto se distribuye bajo licencia:
+
+**CC BY‑NC‑SA 4.0**  
+Permite compartir y adaptar, siempre que:
+
+- se cite al autor,  
+- no haya uso comercial,  
+- las obras derivadas mantengan la misma licencia.
+
+---
+
+# Disclaimer  
+Este proyecto es experimental y se ofrece únicamente con fines educativos y de investigación.  
+No constituye asesoramiento financiero ni una recomendación de inversión.  
+El autor no garantiza la exactitud, integridad o idoneidad del contenido y no asume ninguna responsabilidad por pérdidas derivadas de su uso.
+
+---
+
+# 🧭 Resumen para visitantes de GitHub
+
+Barbell‑Strategies es una metodología moderna para gestionar carteras conservadoras en un entorno incierto.  
+Combina análisis cuantitativo, reglas Barbell y un motor técnico de regímenes para ofrecer una forma disciplinada y eficaz de proteger el capital sin renunciar a oportunidades.
 
 ---
 
