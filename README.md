@@ -107,14 +107,26 @@ Inspirada en la filosofía Barbell, pero adaptada a carteras reales de fondos de
 Barbell-Strategies/
 │
 ├── docs/
-│   ├── 00_vision_general.md
-│   ├── 01_reglas_barbell_fondos.md
-│   ├── 02_estrategia_barbell_alpha.md
-│   ├── 03_metricas_y_riesgos.md
-│   ├── 04_barbell_alert_documentacion.md
-│   ├── 05_dinamica_seguimiento_inversor.md
-│   ├── 06_articulo_rankia.md
-│   ├── 07_presentacion_estrategia_barbell.md
+│   ├── Introducción. Arquitectura general.
+│   ├── 00_Barbell Clásica versus Barbell Alpha
+│   ├── 01_Constantes globales
+│   ├── 02_CLASIFICADORES (Clásico + Alpha + Mixta SAFE/RISK)
+│   ├── 03_Carga de datos + asignación de buckets
+│   ├── 04_SIMULADOR CLÁSICO PRO (Buy&Hold + Barbell Clásica)
+│   ├── 05_SIMULADOR ALPHA (con MacroAlpha híbrido)
+│   ├── 06_MÉTRICAS Y TABLA FINAL (SIN ComparativaAlpha)
+│   ├── 07_PIPELINE PRO (EJECUCIÓN COMPLETA Y DEPURACIÓN) 
+│   ├── 08_ GRÁFICOS + TABLA FINAL + REBALANCEOS 
+│   ├── 09_EXPORTACIÓN A EXCEL Y CSV 
+│   ├── 10_INFORME PDF AUTOMÁTICO 
+│   ├── 11_DASHBOARD INTERACTIVO PLOTLY 
+│   ├── 12_CELDA 12 — PIPELINE COMPLETO PRO (ONE-SHOT LIMPIO) 
+│   ├── 13_ALERTA BARBELL ALPHA (motor técnico) 
+│   ├── 14_ALERTA BARBELL CLÁSICA (PRO FINAL)¶ 
+│   ├── 15_Conclusiones y Futuras Extensiones 
+│   ├── 16_CÓMO DEBE UTILIZAR UN INVERSOR LA ESTRATEGIA BARBELL CRI V7‑6 
+│   ├── 17_PIPELINE OPERATIVO (REGLAS DEL INVERSOR) 
+│   ├── 18_Automatizar las 5 reglas operativas del inversor 
 │   └── img/
 │
 ├── src/                # Código fuente del motor cuantitativo
@@ -122,10 +134,6 @@ Barbell-Strategies/
 ├── notebooks/          # Jupyter Notebooks de análisis
 └── README.md
 ```
-
----
-
-
 ---
 
 # 🚀 Guía rápida de uso
